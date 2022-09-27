@@ -1,6 +1,6 @@
-[gd_scene load_steps=39 format=3 uid="uid://ccjo75mjcap7q"]
+[gd_scene load_steps=39 format=3 uid="uid://dce5o7i2rqvfv"]
 
-[ext_resource type="Script" path="res://Scenes/player.gd" id="1_scar7"]
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_scar7"]
 [ext_resource type="Texture2D" uid="uid://dsuyhpmxxrx0i" path="res://Assets/Player/player_animation-sheet.png" id="2_p0y4o"]
 
 [sub_resource type="Animation" id="Animation_3h62d"]
@@ -303,7 +303,7 @@ texture_filter = 1
 texture = ExtResource("2_p0y4o")
 hframes = 4
 vframes = 10
-frame = 10
+frame = 9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -322,3 +322,7 @@ parameters/Walk/blend_position = Vector2(-0.119389, -0.0528384)
 [node name="CollisionShape2d" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("RectangleShape2D_aumi6")
+
+[node name="Camera2d" type="Camera2D" parent="."]
+z_index = 1
+current = true
