@@ -1,0 +1,64 @@
+[gd_scene load_steps=12 format=3 uid="uid://b2o4602f1k6ve"]
+
+[ext_resource type="Texture2D" uid="uid://6aauimcm3yrb" path="res://Assets/free.png" id="1_emleq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac8vs"]
+atlas = ExtResource("1_emleq")
+region = Rect2(48, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n82x4"]
+atlas = ExtResource("1_emleq")
+region = Rect2(32, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5ukf"]
+atlas = ExtResource("1_emleq")
+region = Rect2(16, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oblwd"]
+atlas = ExtResource("1_emleq")
+region = Rect2(0, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m4lj"]
+atlas = ExtResource("1_emleq")
+region = Rect2(48, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdd05"]
+atlas = ExtResource("1_emleq")
+region = Rect2(32, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otuln"]
+atlas = ExtResource("1_emleq")
+region = Rect2(16, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2brwn"]
+atlas = ExtResource("1_emleq")
+region = Rect2(0, 128, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ce4f4"]
+animations = [{
+"frames": [SubResource("AtlasTexture_ac8vs"), SubResource("AtlasTexture_n82x4"), SubResource("AtlasTexture_i5ukf"), SubResource("AtlasTexture_oblwd")],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [SubResource("AtlasTexture_3m4lj"), SubResource("AtlasTexture_vdd05"), SubResource("AtlasTexture_otuln"), SubResource("AtlasTexture_2brwn")],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o33sa"]
+radius = 6.0
+height = 12.0
+
+[node name="Chicken" type="CharacterBody2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+frames = SubResource("SpriteFrames_ce4f4")
+animation = &"walk_left"
+playing = true
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_o33sa")
