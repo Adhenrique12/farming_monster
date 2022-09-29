@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1npy4kjkkkst"]
+[gd_scene load_steps=4 format=3 uid="uid://d1npy4kjkkkst"]
 
 [ext_resource type="FontFile" uid="uid://chohij3qrf2pe" path="res://Assets/fonts/Mister Pixel Regular.otf" id="1_av4kl"]
 [ext_resource type="Script" path="res://Scripts/StartMenu/StartMenu.gd" id="1_y7wki"]
+[ext_resource type="PackedScene" uid="uid://s7jkft3sipnb" path="res://Scenes/Level0.tscn" id="2_8bpvg"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("1_y7wki")
+new_game = ExtResource("2_8bpvg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2i(0, 120)
