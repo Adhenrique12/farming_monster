@@ -337,7 +337,7 @@ graph_offset = Vector2(11, 41)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jcxx7"]
 radius = 7.0
-height = 27.0
+height = 28.0
 
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
@@ -372,15 +372,11 @@ parameters/Walk/blend_position = Vector2(-0.00566572, 0.480952)
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_jcxx7")
 
-[node name="pivot" type="Marker2D" parent="."]
-
-[node name="cameraOffset" type="Marker2D" parent="pivot"]
-position = Vector2(-2, 2)
-
-[node name="Camera2d" type="Camera2D" parent="pivot/cameraOffset"]
-position = Vector2(0, -2)
+[node name="Camera2d" type="Camera2D" parent="."]
+position = Vector2(-2, 0)
 z_index = 1
 current = true
+zoom = Vector2(4, 4)
 smoothing_speed = 1.0
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
