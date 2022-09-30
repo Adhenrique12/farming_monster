@@ -23,5 +23,5 @@ position = Vector2(0.5, 0)
 shape = SubResource("CapsuleShape2D_ovm24")
 
 [connection signal="timeout" from="GrowthTimer" to="." method="_on_timer_timeout"]
-[connection signal="timeout" from="Test" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Test" to="." method="_on_test_timeout"]
+[connection signal="timeout" from="Test" to="." method="_on_timer_timeout"]
