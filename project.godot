@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="Farming Monster"
-run/main_scene="res://Scenes/StartMenu.tscn"
-config/features=PackedStringArray("4.0", "Vulkan Mobile")
+run/main_scene="res://Scenes/UI/StartMenu.tscn"
+config/features=PackedStringArray("4.0")
 config/icon="res://icon.svg"
 
 [display]
@@ -50,5 +50,5 @@ right={
 
 [rendering]
 
-vulkan/rendering/back_end=1
 textures/canvas_textures/default_texture_filter=0
+vulkan/rendering/back_end=1

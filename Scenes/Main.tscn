@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm1eh4nqoonkp"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_0pf7h"]
+[ext_resource type="PackedScene" uid="uid://bx1qranhe18py" path="res://Scenes/World.tscn" id="1_2egsu"]
+[ext_resource type="PackedScene" uid="uid://urx4rpra7c6k" path="res://Scenes/Player.tscn" id="2_d1pew"]
+[ext_resource type="PackedScene" uid="uid://b2o4602f1k6ve" path="res://Scenes/Chicken.tscn" id="3_hlvtu"]
+
+[node name="Main" type="Node"]
+process_mode = 3
+script = ExtResource("1_0pf7h")
+
+[node name="Pausable" type="Node2D" parent="."]
+process_mode = 1
+
+[node name="Chicken" parent="Pausable" instance=ExtResource("3_hlvtu")]
+position = Vector2(132, 191)
+
+[node name="World" parent="Pausable" instance=ExtResource("1_2egsu")]
+
+[node name="Player" parent="Pausable/World" instance=ExtResource("2_d1pew")]
+position = Vector2(196, 122)
