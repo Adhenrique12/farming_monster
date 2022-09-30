@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://ffunecj66j0e"]
+
+[ext_resource type="PackedScene" uid="uid://pcjmqgsn6hjn" path="res://Scenes/Crops/BasePlant.tscn" id="1_mmius"]
+[ext_resource type="Texture2D" uid="uid://6aauimcm3yrb" path="res://Assets/free.png" id="2_g85jm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oj6sc"]
+atlas = ExtResource("2_g85jm")
+region = Rect2(96, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7unu0"]
+atlas = ExtResource("2_g85jm")
+region = Rect2(112, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcwiv"]
+atlas = ExtResource("2_g85jm")
+region = Rect2(128, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ntvs"]
+atlas = ExtResource("2_g85jm")
+region = Rect2(144, 144, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tdhf"]
+atlas = ExtResource("2_g85jm")
+region = Rect2(160, 144, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ehy4"]
+animations = [{
+"frames": [SubResource("AtlasTexture_oj6sc"), SubResource("AtlasTexture_7unu0"), SubResource("AtlasTexture_pcwiv"), SubResource("AtlasTexture_2ntvs"), SubResource("AtlasTexture_5tdhf")],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7ud8"]
+atlas = ExtResource("2_g85jm")
+region = Rect2(176, 144, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rs33k"]
+animations = [{
+"frames": [SubResource("AtlasTexture_c7ud8")],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tomatoes" type="Node2D"]
+
+[node name="BasePlant" parent="." instance=ExtResource("1_mmius")]
+days_to_grow = 5
+
+[node name="Plant" type="AnimatedSprite2D" parent="BasePlant"]
+frames = SubResource("SpriteFrames_7ehy4")
+
+[node name="Fruit" type="AnimatedSprite2D" parent="BasePlant"]
+visible = false
+position = Vector2(6, 9)
+scale = Vector2(0.8, 0.8)
+frames = SubResource("SpriteFrames_rs33k")

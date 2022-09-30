@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm1eh4nqoonkp"]
+[gd_scene load_steps=6 format=3 uid="uid://cm1eh4nqoonkp"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_0pf7h"]
 [ext_resource type="PackedScene" uid="uid://bx1qranhe18py" path="res://Scenes/World.tscn" id="1_2egsu"]
 [ext_resource type="PackedScene" uid="uid://urx4rpra7c6k" path="res://Scenes/Player.tscn" id="2_d1pew"]
 [ext_resource type="PackedScene" uid="uid://b2o4602f1k6ve" path="res://Scenes/Chicken.tscn" id="3_hlvtu"]
+[ext_resource type="PackedScene" uid="uid://ffunecj66j0e" path="res://Scenes/Crops/Tomatoes.tscn" id="5_r5uw4"]
 
 [node name="Main" type="Node"]
 process_mode = 3
@@ -19,3 +20,6 @@ position = Vector2(132, 191)
 
 [node name="Player" parent="Pausable/World" instance=ExtResource("2_d1pew")]
 position = Vector2(196, 122)
+
+[node name="Tomatoes" parent="Pausable/World" instance=ExtResource("5_r5uw4")]
+position = Vector2(265, 170)
